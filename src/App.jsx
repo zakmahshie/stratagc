@@ -1,8 +1,9 @@
 import logo from './assets/logo.png'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const menuRef = useRef(null)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -15,6 +16,24 @@ function App() {
     }
     setIsMenuOpen(false)
   }
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsMenuOpen(false)
+      }
+    }
+
+    if (isMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [isMenuOpen])
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800">
       {/* Header */}
@@ -30,7 +49,7 @@ function App() {
             </div>
             
             {/* Hamburger Menu Button */}
-            <div className="relative">
+            <div className="relative" ref={menuRef}>
               <button
                 onClick={toggleMenu}
                 className="relative z-50 p-2 rounded-lg hover:bg-slate-100 transition-colors duration-200"
