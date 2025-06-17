@@ -145,21 +145,21 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="relative py-32 bg-slate-50">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-50 to-white"></div>
+      <section id="about" className="relative py-32" style={{ background: 'var(--color-bg)' }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white"></div>
         <div className="relative max-w-6xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-5xl lg:text-6xl font-bold mb-6 text-slate-800" style={{ fontFamily: 'var(--font-serif)' }}>
+            <h2 className="text-5xl lg:text-6xl font-bold mb-6" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>
               About
             </h2>
-            <div className="w-24 h-1 mx-auto rounded-full" style={{ background: 'linear-gradient(90deg, #B68D40 0%, #8C1D40 100%)' }}></div>
+            <div className="w-24 h-1 mx-auto rounded-full" style={{ background: 'var(--color-accent)' }}></div>
           </div>
           
           {/* Main Philosophy */}
           <div className="text-center mb-16">
-            <div className="max-w-4xl mx-auto p-8 bg-white backdrop-blur-sm rounded-2xl border border-slate-200 shadow-lg">
-              <h3 className="text-2xl font-bold text-slate-800 mb-6" style={{ fontFamily: 'var(--font-serif)' }}>Our Philosophy</h3>
-              <p className="text-xl text-slate-600 leading-relaxed" style={{ fontFamily: 'var(--font-sans)' }}>
+            <div className="max-w-4xl mx-auto p-8 bg-white backdrop-blur-sm rounded-2xl shadow-lg" style={{ border: '1px solid var(--grey-warm-medium)' }}>
+              <h3 className="text-2xl font-bold mb-6" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>Our Philosophy</h3>
+              <p className="text-xl leading-relaxed" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>
                 StrataGC was founded on the belief that legal should be embedded in strategy—not bolted on as an afterthought. Our founder brings years of executive-level in-house legal experience supporting high-growth companies, government contractors, and founder-led teams.
               </p>
             </div>
@@ -169,12 +169,12 @@ function App() {
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
             {/* What We Do */}
             <div className="space-y-6">
-              <h3 className="text-3xl font-bold text-slate-800 mb-8 text-center lg:text-left" style={{ fontFamily: 'var(--font-serif)' }}>What We Do</h3>
-              <div className="p-8 bg-white backdrop-blur-sm rounded-2xl border border-slate-200 hover:border-slate-300 transition-all duration-300 shadow-lg hover:shadow-xl">
-                <p className="text-lg text-slate-600 leading-relaxed mb-4" style={{ fontFamily: 'var(--font-sans)' }}>
+              <h3 className="text-3xl font-bold mb-8 text-center lg:text-left" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>What We Do</h3>
+              <div className="p-8 bg-white backdrop-blur-sm rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl" style={{ border: '1px solid var(--grey-warm-medium)' }}>
+                <p className="text-lg leading-relaxed mb-4" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>
                   StrataGC exists for companies that are growing, scaling, or navigating complexity—and who need more than reactive legal support.
                 </p>
-                <p className="text-lg text-slate-600 leading-relaxed" style={{ fontFamily: 'var(--font-sans)' }}>
+                <p className="text-lg leading-relaxed" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>
                   We provide fractional General Counsel and strategic advisory services that go beyond compliance. Our model integrates legal strategy into the core of your business decision-making.
                 </p>
               </div>
@@ -182,12 +182,12 @@ function App() {
             
             {/* How We Work */}
             <div className="space-y-6">
-              <h3 className="text-3xl font-bold text-slate-800 mb-8 text-center lg:text-left" style={{ fontFamily: 'var(--font-serif)' }}>How We Work</h3>
-              <div className="p-8 bg-white backdrop-blur-sm rounded-2xl border border-slate-200 hover:border-slate-300 transition-all duration-300 shadow-lg hover:shadow-xl">
-                <p className="text-lg text-slate-600 leading-relaxed mb-4" style={{ fontFamily: 'var(--font-sans)' }}>
+              <h3 className="text-3xl font-bold mb-8 text-center lg:text-left" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>How We Work</h3>
+              <div className="p-8 bg-white backdrop-blur-sm rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl" style={{ border: '1px solid var(--grey-warm-medium)' }}>
+                <p className="text-lg leading-relaxed mb-4" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>
                   At StrataGC, we believe that every layer of your business—operations, finance, people, governance—has legal implications that should be handled with foresight, not hindsight.
                 </p>
-                <p className="text-lg text-slate-600 leading-relaxed" style={{ fontFamily: 'var(--font-sans)' }}>
+                <p className="text-lg leading-relaxed" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>
                   That's why our approach is embedded, proactive, and aligned with your leadership team. We don't just manage risk—we help you capture value, streamline operations, and prepare for what's next.
                 </p>
               </div>
@@ -197,18 +197,18 @@ function App() {
           {/* The Strata Concept */}
           <div className="text-center">
             <div className="max-w-5xl mx-auto">
-              <h3 className="text-3xl font-bold text-slate-800 mb-8" style={{ fontFamily: 'var(--font-serif)' }}>The "Strata" Concept</h3>
+              <h3 className="text-3xl font-bold mb-8" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>The "Strata" Concept</h3>
               <div className="grid md:grid-cols-2 gap-8">
-                <div className="p-8 bg-white backdrop-blur-sm rounded-2xl border border-slate-200 hover:shadow-lg transition-all duration-300" style={{ borderLeft: '4px solid #B68D40' }}>
-                  <h4 className="text-xl font-semibold mb-4" style={{ color: '#B68D40', fontFamily: 'var(--font-serif)' }}>Layered Approach</h4>
-                  <p className="text-slate-600 leading-relaxed" style={{ fontFamily: 'var(--font-sans)' }}>
+                <div className="p-8 bg-white backdrop-blur-sm rounded-2xl hover:shadow-lg transition-all duration-300" style={{ border: '1px solid var(--grey-warm-medium)', borderLeft: '4px solid var(--color-accent)' }}>
+                  <h4 className="text-xl font-semibold mb-4" style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-serif)' }}>Layered Approach</h4>
+                  <p className="leading-relaxed" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>
                     The name "Strata" reflects what we do: we work across the layers of your organization, bringing legal clarity to business structure, contract negotiations, regulatory landscapes, and strategic execution.
                   </p>
                 </div>
                 
-                <div className="p-8 bg-white backdrop-blur-sm rounded-2xl border border-slate-200 hover:shadow-lg transition-all duration-300" style={{ borderLeft: '4px solid #8C1D40' }}>
-                  <h4 className="text-xl font-semibold mb-4" style={{ color: '#8C1D40', fontFamily: 'var(--font-serif)' }}>Strategic Partnership</h4>
-                  <p className="text-slate-600 leading-relaxed" style={{ fontFamily: 'var(--font-sans)' }}>
+                <div className="p-8 bg-white backdrop-blur-sm rounded-2xl hover:shadow-lg transition-all duration-300" style={{ border: '1px solid var(--grey-warm-medium)', borderLeft: '4px solid var(--blue-light)' }}>
+                  <h4 className="text-xl font-semibold mb-4" style={{ color: 'var(--blue-light)', fontFamily: 'var(--font-serif)' }}>Strategic Partnership</h4>
+                  <p className="leading-relaxed" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>
                     "StrataGC" evokes the word "strategy", which is central to our approach. Our clients aren't looking for outside counsel—they want a partner who thinks like an operator and acts like a leader.
                   </p>
                 </div>
@@ -218,9 +218,9 @@ function App() {
 
           {/* Who We Serve */}
           <div className="mt-16 text-center">
-            <div className="p-8 bg-white backdrop-blur-sm rounded-2xl border border-slate-200 shadow-lg">
-              <h3 className="text-2xl font-bold text-slate-800 mb-6" style={{ fontFamily: 'var(--font-serif)' }}>Who We Serve</h3>
-              <p className="text-xl text-slate-600 leading-relaxed max-w-4xl mx-auto" style={{ fontFamily: 'var(--font-sans)' }}>
+            <div className="p-8 bg-white backdrop-blur-sm rounded-2xl shadow-lg" style={{ border: '1px solid var(--grey-warm-medium)' }}>
+              <h3 className="text-2xl font-bold mb-6" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>Who We Serve</h3>
+              <p className="text-xl leading-relaxed max-w-4xl mx-auto" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>
                 Whether you're a founder needing board-ready legal infrastructure, a COO trying to operationalize compliance, or a federal contractor preparing for your next audit or joint venture, StrataGC becomes your legal layer of strategic advantage.
               </p>
             </div>
@@ -294,72 +294,72 @@ function App() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="relative py-32 bg-slate-50">
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-slate-50 to-slate-100"></div>
+      <section id="services" className="relative py-32" style={{ background: 'var(--grey-warm-light)' }}>
+        <div className="absolute inset-0 bg-gradient-to-t from-white to-gray-50"></div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-5xl lg:text-6xl font-bold mb-6 text-slate-800" style={{ fontFamily: 'var(--font-serif)' }}>
+            <h2 className="text-5xl lg:text-6xl font-bold mb-6" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>
               Services
             </h2>
-            <p className="text-2xl text-slate-600 font-light mb-4" style={{ fontFamily: 'var(--font-sans)' }}>What We Do</p>
-            <p className="text-xl text-slate-500" style={{ fontFamily: 'var(--font-sans)' }}>Fractional General Counsel + Business Advisor, Delivered Where You Need It Most</p>
-            <div className="w-24 h-1 mx-auto rounded-full mt-8" style={{ background: 'linear-gradient(90deg, #B68D40 0%, #8C1D40 100%)' }}></div>
+            <p className="text-2xl font-light mb-4" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>What We Do</p>
+            <p className="text-xl" style={{ color: 'var(--warm-accent)', fontFamily: 'var(--font-sans)' }}>Fractional General Counsel + Business Advisor, Delivered Where You Need It Most</p>
+            <div className="w-24 h-1 mx-auto rounded-full mt-8" style={{ background: 'var(--color-accent)' }}></div>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="group relative col-span-full lg:col-span-1">
-              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" style={{ background: 'rgba(182, 141, 64, 0.1)' }}></div>
-              <div className="relative p-8 bg-white backdrop-blur-sm rounded-2xl border border-slate-200 hover:shadow-xl transition-all duration-300 h-full group-hover:transform group-hover:scale-[1.02]" style={{ borderLeft: '4px solid #B68D40' }}>
+              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" style={{ background: 'rgba(49, 112, 142, 0.1)' }}></div>
+              <div className="relative p-8 bg-white backdrop-blur-sm rounded-2xl hover:shadow-xl transition-all duration-300 h-full group-hover:transform group-hover:scale-[1.02]" style={{ border: '1px solid var(--grey-warm-medium)', borderLeft: '4px solid var(--color-accent)' }}>
                 <div className="flex items-center mb-6">
-                  <div className="w-3 h-3 rounded-full mr-3 group-hover:animate-pulse" style={{ backgroundColor: '#B68D40' }}></div>
-                  <h3 className="text-2xl font-bold text-slate-800" style={{ fontFamily: 'var(--font-serif)' }}>Fractional General Counsel</h3>
+                  <div className="w-3 h-3 rounded-full mr-3 group-hover:animate-pulse" style={{ backgroundColor: 'var(--color-accent)' }}></div>
+                  <h3 className="text-2xl font-bold" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>Fractional General Counsel</h3>
                 </div>
-                <p className="text-slate-600 text-lg leading-relaxed" style={{ fontFamily: 'var(--font-sans)' }}>Embedded legal support tailored to your team's cadence</p>
+                <p className="text-lg leading-relaxed" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>Embedded legal support tailored to your team's cadence</p>
               </div>
             </div>
             
             <div className="group relative">
-              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" style={{ background: 'rgba(140, 29, 64, 0.1)' }}></div>
-              <div className="relative p-8 bg-white backdrop-blur-sm rounded-2xl border border-slate-200 hover:shadow-xl transition-all duration-300 h-full group-hover:transform group-hover:scale-[1.02]" style={{ borderLeft: '4px solid #8C1D40' }}>
+              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" style={{ background: 'rgba(74, 144, 172, 0.1)' }}></div>
+              <div className="relative p-8 bg-white backdrop-blur-sm rounded-2xl hover:shadow-xl transition-all duration-300 h-full group-hover:transform group-hover:scale-[1.02]" style={{ border: '1px solid var(--grey-warm-medium)', borderLeft: '4px solid var(--blue-light)' }}>
                 <div className="flex items-center mb-6">
-                  <div className="w-3 h-3 rounded-full mr-3 group-hover:animate-pulse" style={{ backgroundColor: '#8C1D40' }}></div>
-                  <h3 className="text-2xl font-bold text-slate-800" style={{ fontFamily: 'var(--font-serif)' }}>Contract Strategy & Negotiation</h3>
+                  <div className="w-3 h-3 rounded-full mr-3 group-hover:animate-pulse" style={{ backgroundColor: 'var(--blue-light)' }}></div>
+                  <h3 className="text-2xl font-bold" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>Contract Strategy & Negotiation</h3>
                 </div>
-                <p className="text-slate-600 text-lg leading-relaxed" style={{ fontFamily: 'var(--font-sans)' }}>Infrastructure that protects and scales</p>
+                <p className="text-lg leading-relaxed" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>Infrastructure that protects and scales</p>
               </div>
             </div>
             
             <div className="group relative">
-              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" style={{ background: 'rgba(182, 141, 64, 0.08)' }}></div>
-              <div className="relative p-8 bg-white backdrop-blur-sm rounded-2xl border border-slate-200 hover:shadow-xl transition-all duration-300 h-full group-hover:transform group-hover:scale-[1.02]" style={{ borderLeft: '4px solid #D4AF37' }}>
+              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" style={{ background: 'rgba(123, 135, 148, 0.08)' }}></div>
+              <div className="relative p-8 bg-white backdrop-blur-sm rounded-2xl hover:shadow-xl transition-all duration-300 h-full group-hover:transform group-hover:scale-[1.02]" style={{ border: '1px solid var(--grey-warm-medium)', borderLeft: '4px solid var(--warm-accent)' }}>
                 <div className="flex items-center mb-6">
-                  <div className="w-3 h-3 rounded-full mr-3 group-hover:animate-pulse" style={{ backgroundColor: '#D4AF37' }}></div>
-                  <h3 className="text-2xl font-bold text-slate-800" style={{ fontFamily: 'var(--font-serif)' }}>Compliance & Governance</h3>
+                  <div className="w-3 h-3 rounded-full mr-3 group-hover:animate-pulse" style={{ backgroundColor: 'var(--warm-accent)' }}></div>
+                  <h3 className="text-2xl font-bold" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>Compliance & Governance</h3>
                 </div>
-                <p className="text-slate-600 text-lg leading-relaxed" style={{ fontFamily: 'var(--font-sans)' }}>From board frameworks to audit readiness</p>
+                <p className="text-lg leading-relaxed" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>From board frameworks to audit readiness</p>
               </div>
             </div>
             
             <div className="group relative">
-              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" style={{ background: 'rgba(182, 141, 64, 0.08)' }}></div>
-              <div className="relative p-8 bg-white backdrop-blur-sm rounded-2xl border border-slate-200 hover:shadow-xl transition-all duration-300 h-full group-hover:transform group-hover:scale-[1.02]" style={{ borderLeft: '4px solid #B68D40' }}>
+              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" style={{ background: 'rgba(49, 112, 142, 0.08)' }}></div>
+              <div className="relative p-8 bg-white backdrop-blur-sm rounded-2xl hover:shadow-xl transition-all duration-300 h-full group-hover:transform group-hover:scale-[1.02]" style={{ border: '1px solid var(--grey-warm-medium)', borderLeft: '4px solid var(--color-accent)' }}>
                 <div className="flex items-center mb-6">
-                  <div className="w-3 h-3 rounded-full mr-3 group-hover:animate-pulse" style={{ backgroundColor: '#B68D40' }}></div>
-                  <h3 className="text-2xl font-bold text-slate-800" style={{ fontFamily: 'var(--font-serif)' }}>Transaction Readiness</h3>
+                  <div className="w-3 h-3 rounded-full mr-3 group-hover:animate-pulse" style={{ backgroundColor: 'var(--color-accent)' }}></div>
+                  <h3 className="text-2xl font-bold" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>Transaction Readiness</h3>
                 </div>
-                <p className="text-slate-600 text-lg leading-relaxed" style={{ fontFamily: 'var(--font-sans)' }}>M&A, financing, and strategic commercial deals</p>
+                <p className="text-lg leading-relaxed" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>M&A, financing, and strategic commercial deals</p>
               </div>
             </div>
             
             <div className="group relative md:col-span-2 lg:col-span-2">
-              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" style={{ background: 'rgba(140, 29, 64, 0.08)' }}></div>
-              <div className="relative p-8 bg-white backdrop-blur-sm rounded-2xl border border-slate-200 hover:shadow-xl transition-all duration-300 h-full group-hover:transform group-hover:scale-[1.02]" style={{ borderLeft: '4px solid #8C1D40' }}>
+              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" style={{ background: 'rgba(74, 144, 172, 0.08)' }}></div>
+              <div className="relative p-8 bg-white backdrop-blur-sm rounded-2xl hover:shadow-xl transition-all duration-300 h-full group-hover:transform group-hover:scale-[1.02]" style={{ border: '1px solid var(--grey-warm-medium)', borderLeft: '4px solid var(--blue-light)' }}>
                 <div className="flex items-center mb-6">
-                  <div className="w-3 h-3 rounded-full mr-3 group-hover:animate-pulse" style={{ backgroundColor: '#8C1D40' }}></div>
-                  <h3 className="text-2xl font-bold text-slate-800" style={{ fontFamily: 'var(--font-serif)' }}>Legal-Business Advisory</h3>
+                  <div className="w-3 h-3 rounded-full mr-3 group-hover:animate-pulse" style={{ backgroundColor: 'var(--blue-light)' }}></div>
+                  <h3 className="text-2xl font-bold" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>Legal-Business Advisory</h3>
                 </div>
-                <p className="text-slate-600 text-lg leading-relaxed" style={{ fontFamily: 'var(--font-sans)' }}>Strategic insight at the intersection of law, ops, and leadership</p>
+                <p className="text-lg leading-relaxed" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>Strategic insight at the intersection of law, ops, and leadership</p>
               </div>
             </div>
           </div>
