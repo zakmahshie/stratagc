@@ -35,7 +35,7 @@ function App() {
   }, [isMenuOpen])
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800">
+    <div className="min-h-screen" style={{ background: 'var(--color-bg)', color: 'var(--color-text)' }}>
       {/* Header */}
       <header className="fixed top-0 w-full bg-white/90 backdrop-blur-xl border-b border-slate-200 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4">
@@ -100,8 +100,8 @@ function App() {
       <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20" style={{ background: 'linear-gradient(135deg, #0A1F44 0%, #1F2A44 50%, #2A3B5C 100%)' }}>
         {/* Animated background */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse" style={{ background: 'rgba(182, 141, 64, 0.1)' }}></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse delay-1000" style={{ background: 'rgba(140, 29, 64, 0.1)' }}></div>
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse" style={{ background: 'rgba(46, 125, 143, 0.1)' }}></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse delay-1000" style={{ background: 'rgba(56, 161, 105, 0.1)' }}></div>
         </div>
         
         <div className="relative max-w-6xl mx-auto px-6 lg:px-8 text-center">
@@ -124,13 +124,13 @@ function App() {
               
               <button className="group relative px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl text-white" 
                       style={{ 
-                        background: 'linear-gradient(135deg, #B68D40 0%, #8C1D40 100%)',
-                        boxShadow: '0 10px 30px rgba(182, 141, 64, 0.3)'
+                        background: 'linear-gradient(135deg, var(--blue-professional) 0%, var(--sage-medium) 100%)',
+                        boxShadow: '0 10px 30px rgba(46, 125, 143, 0.3)'
                       }}
-                      onMouseEnter={(e) => e.target.style.boxShadow = '0 15px 40px rgba(182, 141, 64, 0.4)'}
-                      onMouseLeave={(e) => e.target.style.boxShadow = '0 10px 30px rgba(182, 141, 64, 0.3)'}>
+                      onMouseEnter={(e) => e.target.style.boxShadow = '0 15px 40px rgba(46, 125, 143, 0.4)'}
+                      onMouseLeave={(e) => e.target.style.boxShadow = '0 10px 30px rgba(46, 125, 143, 0.3)'}>
                 <span className="relative z-10">Get Started</span>
-                <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300" style={{ background: 'linear-gradient(135deg, #D4AF37 0%, #B68D40 100%)' }}></div>
+                <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300" style={{ background: 'linear-gradient(135deg, var(--sage-light) 0%, var(--blue-professional) 100%)' }}></div>
               </button>
             </div>
           </div>
@@ -145,19 +145,19 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="relative py-32" style={{ background: 'var(--color-bg)' }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white"></div>
+      <section id="about" className="relative py-32" style={{ background: 'var(--grey-warm-lightest)' }}>
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, var(--grey-warm-lightest) 0%, var(--white-pure) 100%)' }}></div>
         <div className="relative max-w-6xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-5xl lg:text-6xl font-bold mb-6" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>
               About
             </h2>
-            <div className="w-24 h-1 mx-auto rounded-full" style={{ background: 'var(--color-accent)' }}></div>
+            <div className="w-24 h-1 mx-auto rounded-full" style={{ background: 'linear-gradient(90deg, var(--blue-professional) 0%, var(--sage-medium) 100%)' }}></div>
           </div>
           
           {/* Main Philosophy */}
           <div className="text-center mb-16">
-            <div className="max-w-4xl mx-auto p-8 bg-white backdrop-blur-sm rounded-2xl shadow-lg" style={{ border: '1px solid var(--grey-warm-medium)' }}>
+            <div className="max-w-4xl mx-auto p-8 rounded-2xl professional-card">
               <h3 className="text-2xl font-bold mb-6" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>Our Philosophy</h3>
               <p className="text-xl leading-relaxed" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>
                 StrataGC was founded on the belief that legal should be embedded in strategy—not bolted on as an afterthought. Our founder brings years of executive-level in-house legal experience supporting high-growth companies, government contractors, and founder-led teams.
@@ -170,7 +170,7 @@ function App() {
             {/* What We Do */}
             <div className="space-y-6">
               <h3 className="text-3xl font-bold mb-8 text-center lg:text-left" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>What We Do</h3>
-              <div className="p-8 bg-white backdrop-blur-sm rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl" style={{ border: '1px solid var(--grey-warm-medium)' }}>
+              <div className="p-8 rounded-2xl professional-card">
                 <p className="text-lg leading-relaxed mb-4" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>
                   StrataGC exists for companies that are growing, scaling, or navigating complexity—and who need more than reactive legal support.
                 </p>
@@ -183,7 +183,7 @@ function App() {
             {/* How We Work */}
             <div className="space-y-6">
               <h3 className="text-3xl font-bold mb-8 text-center lg:text-left" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>How We Work</h3>
-              <div className="p-8 bg-white backdrop-blur-sm rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl" style={{ border: '1px solid var(--grey-warm-medium)' }}>
+              <div className="p-8 rounded-2xl professional-card">
                 <p className="text-lg leading-relaxed mb-4" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>
                   At StrataGC, we believe that every layer of your business—operations, finance, people, governance—has legal implications that should be handled with foresight, not hindsight.
                 </p>
@@ -199,15 +199,15 @@ function App() {
             <div className="max-w-5xl mx-auto">
               <h3 className="text-3xl font-bold mb-8" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>The "Strata" Concept</h3>
               <div className="grid md:grid-cols-2 gap-8">
-                <div className="p-8 bg-white backdrop-blur-sm rounded-2xl hover:shadow-lg transition-all duration-300" style={{ border: '1px solid var(--grey-warm-medium)', borderLeft: '4px solid var(--color-accent)' }}>
-                  <h4 className="text-xl font-semibold mb-4" style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-serif)' }}>Layered Approach</h4>
+                <div className="p-8 rounded-2xl professional-card" style={{ borderLeft: '4px solid var(--blue-professional)' }}>
+                  <h4 className="text-xl font-semibold mb-4" style={{ color: 'var(--blue-professional)', fontFamily: 'var(--font-serif)' }}>Layered Approach</h4>
                   <p className="leading-relaxed" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>
                     The name "Strata" reflects what we do: we work across the layers of your organization, bringing legal clarity to business structure, contract negotiations, regulatory landscapes, and strategic execution.
                   </p>
                 </div>
                 
-                <div className="p-8 bg-white backdrop-blur-sm rounded-2xl hover:shadow-lg transition-all duration-300" style={{ border: '1px solid var(--grey-warm-medium)', borderLeft: '4px solid var(--blue-light)' }}>
-                  <h4 className="text-xl font-semibold mb-4" style={{ color: 'var(--blue-light)', fontFamily: 'var(--font-serif)' }}>Strategic Partnership</h4>
+                <div className="p-8 rounded-2xl professional-card" style={{ borderLeft: '4px solid var(--sage-medium)' }}>
+                  <h4 className="text-xl font-semibold mb-4" style={{ color: 'var(--sage-medium)', fontFamily: 'var(--font-serif)' }}>Strategic Partnership</h4>
                   <p className="leading-relaxed" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>
                     "StrataGC" evokes the word "strategy", which is central to our approach. Our clients aren't looking for outside counsel—they want a partner who thinks like an operator and acts like a leader.
                   </p>
@@ -218,7 +218,7 @@ function App() {
 
           {/* Who We Serve */}
           <div className="mt-16 text-center">
-            <div className="p-8 bg-white backdrop-blur-sm rounded-2xl shadow-lg" style={{ border: '1px solid var(--grey-warm-medium)' }}>
+            <div className="p-8 rounded-2xl professional-card">
               <h3 className="text-2xl font-bold mb-6" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>Who We Serve</h3>
               <p className="text-xl leading-relaxed max-w-4xl mx-auto" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>
                 Whether you're a founder needing board-ready legal infrastructure, a COO trying to operationalize compliance, or a federal contractor preparing for your next audit or joint venture, StrataGC becomes your legal layer of strategic advantage.
@@ -229,26 +229,26 @@ function App() {
       </section>
 
       {/* Why StrataGC Section */}
-      <section id="why-stratagc" className="relative py-32" style={{ background: 'linear-gradient(180deg, #1F2A44 0%, #0A1F44 100%)' }}>
+      <section id="why-stratagc" className="relative py-32" style={{ background: 'linear-gradient(180deg, var(--navy-deep) 0%, var(--navy-medium) 100%)' }}>
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/2 left-1/4 w-72 h-72 rounded-full blur-3xl" style={{ background: 'rgba(182, 141, 64, 0.1)' }}></div>
-          <div className="absolute top-1/4 right-1/4 w-72 h-72 rounded-full blur-3xl" style={{ background: 'rgba(140, 29, 64, 0.1)' }}></div>
+          <div className="absolute top-1/2 left-1/4 w-72 h-72 rounded-full blur-3xl" style={{ background: 'rgba(46, 125, 143, 0.15)' }}></div>
+          <div className="absolute top-1/4 right-1/4 w-72 h-72 rounded-full blur-3xl" style={{ background: 'rgba(56, 161, 105, 0.15)' }}></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-5xl lg:text-6xl font-bold mb-6 text-white" style={{ fontFamily: 'var(--font-serif)' }}>
+            <h2 className="text-5xl lg:text-6xl font-bold mb-6" style={{ color: 'var(--white-pure)', fontFamily: 'var(--font-serif)' }}>
               Why StrataGC?
             </h2>
-            <p className="text-2xl text-slate-300 font-light" style={{ fontFamily: 'var(--font-sans)' }}>More Than Legal Support—A Strategic Legal Partner</p>
-            <div className="w-24 h-1 mx-auto rounded-full mt-8" style={{ background: 'linear-gradient(90deg, #B68D40 0%, #8C1D40 100%)' }}></div>
+            <p className="text-2xl text-slate-300 font-light" style={{ fontFamily: 'var(--font-sans)' }}>Strategic Legal Partnership</p>
+            <div className="w-24 h-1 mx-auto rounded-full mt-8" style={{ background: 'linear-gradient(90deg, var(--blue-professional) 0%, var(--sage-medium) 100%)' }}></div>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="group relative">
-              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" style={{ background: 'rgba(182, 141, 64, 0.2)' }}></div>
+              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" style={{ background: 'rgba(46, 125, 143, 0.2)' }}></div>
               <div className="relative p-8 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-white/30 transition-all duration-300 h-full">
-                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" style={{ background: 'linear-gradient(135deg, #B68D40 0%, #D4AF37 100%)' }}>
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" style={{ background: 'linear-gradient(135deg, var(--blue-professional) 0%, var(--navy-light) 100%)' }}>
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
@@ -259,9 +259,9 @@ function App() {
             </div>
             
             <div className="group relative">
-              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" style={{ background: 'rgba(140, 29, 64, 0.2)' }}></div>
+              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" style={{ background: 'rgba(56, 161, 105, 0.2)' }}></div>
               <div className="relative p-8 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-white/30 transition-all duration-300 h-full">
-                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" style={{ background: 'linear-gradient(135deg, #8C1D40 0%, #B68D40 100%)' }}>
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" style={{ background: 'linear-gradient(135deg, var(--sage-medium) 0%, var(--sage-light) 100%)' }}>
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
@@ -272,9 +272,9 @@ function App() {
             </div>
             
             <div className="group relative">
-              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" style={{ background: 'rgba(182, 141, 64, 0.15)' }}></div>
+              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" style={{ background: 'rgba(47, 133, 90, 0.2)' }}></div>
               <div className="relative p-8 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-white/30 transition-all duration-300 h-full">
-                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" style={{ background: 'linear-gradient(135deg, #D4AF37 0%, #B68D40 100%)' }}>
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" style={{ background: 'linear-gradient(135deg, var(--sage-deep) 0%, var(--sage-medium) 100%)' }}>
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.871 4A17.926 17.926 0 003 12c0 2.874.673 5.59 1.871 8m14.13 0a17.926 17.926 0 001.87-8c0-2.874-.673-5.59-1.87-8M9 9h1.246a1 1 0 01.961.725l1.586 5.55a1 1 0 00.961.725H15m1-7h-.08a2 2 0 00-1.519.698L9.6 15.302A2 2 0 018.08 16H8" />
                   </svg>
@@ -295,7 +295,7 @@ function App() {
 
       {/* Services Section */}
       <section id="services" className="relative py-32" style={{ background: 'var(--grey-warm-light)' }}>
-        <div className="absolute inset-0 bg-gradient-to-t from-white to-gray-50"></div>
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, var(--grey-warm-light) 0%, var(--white-pure) 100%)' }}></div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -303,16 +303,16 @@ function App() {
               Services
             </h2>
             <p className="text-2xl font-light mb-4" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>What We Do</p>
-            <p className="text-xl" style={{ color: 'var(--warm-accent)', fontFamily: 'var(--font-sans)' }}>Fractional General Counsel + Business Advisor, Delivered Where You Need It Most</p>
-            <div className="w-24 h-1 mx-auto rounded-full mt-8" style={{ background: 'var(--color-accent)' }}></div>
+            <p className="text-xl" style={{ color: 'var(--grey-warm-dark)', fontFamily: 'var(--font-sans)' }}>Fractional General Counsel + Business Advisor, Delivered Where You Need It Most</p>
+            <div className="w-24 h-1 mx-auto rounded-full mt-8" style={{ background: 'linear-gradient(90deg, var(--blue-professional) 0%, var(--sage-medium) 100%)' }}></div>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="group relative col-span-full lg:col-span-1">
-              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" style={{ background: 'rgba(49, 112, 142, 0.1)' }}></div>
-              <div className="relative p-8 bg-white backdrop-blur-sm rounded-2xl hover:shadow-xl transition-all duration-300 h-full group-hover:transform group-hover:scale-[1.02]" style={{ border: '1px solid var(--grey-warm-medium)', borderLeft: '4px solid var(--color-accent)' }}>
+              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" style={{ background: 'rgba(46, 125, 143, 0.1)' }}></div>
+              <div className="relative p-8 rounded-2xl professional-card h-full group-hover:transform group-hover:scale-[1.02] transition-all duration-300" style={{ borderLeft: '4px solid var(--blue-professional)' }}>
                 <div className="flex items-center mb-6">
-                  <div className="w-3 h-3 rounded-full mr-3 group-hover:animate-pulse" style={{ backgroundColor: 'var(--color-accent)' }}></div>
+                  <div className="w-3 h-3 rounded-full mr-3 group-hover:animate-pulse" style={{ backgroundColor: 'var(--blue-professional)' }}></div>
                   <h3 className="text-2xl font-bold" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>Fractional General Counsel</h3>
                 </div>
                 <p className="text-lg leading-relaxed" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>Embedded legal support tailored to your team's cadence</p>
@@ -320,10 +320,10 @@ function App() {
             </div>
             
             <div className="group relative">
-              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" style={{ background: 'rgba(74, 144, 172, 0.1)' }}></div>
-              <div className="relative p-8 bg-white backdrop-blur-sm rounded-2xl hover:shadow-xl transition-all duration-300 h-full group-hover:transform group-hover:scale-[1.02]" style={{ border: '1px solid var(--grey-warm-medium)', borderLeft: '4px solid var(--blue-light)' }}>
+              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" style={{ background: 'rgba(56, 161, 105, 0.1)' }}></div>
+              <div className="relative p-8 rounded-2xl professional-card h-full group-hover:transform group-hover:scale-[1.02] transition-all duration-300" style={{ borderLeft: '4px solid var(--sage-medium)' }}>
                 <div className="flex items-center mb-6">
-                  <div className="w-3 h-3 rounded-full mr-3 group-hover:animate-pulse" style={{ backgroundColor: 'var(--blue-light)' }}></div>
+                  <div className="w-3 h-3 rounded-full mr-3 group-hover:animate-pulse" style={{ backgroundColor: 'var(--sage-medium)' }}></div>
                   <h3 className="text-2xl font-bold" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>Contract Strategy & Negotiation</h3>
                 </div>
                 <p className="text-lg leading-relaxed" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>Infrastructure that protects and scales</p>
@@ -331,10 +331,10 @@ function App() {
             </div>
             
             <div className="group relative">
-              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" style={{ background: 'rgba(123, 135, 148, 0.08)' }}></div>
-              <div className="relative p-8 bg-white backdrop-blur-sm rounded-2xl hover:shadow-xl transition-all duration-300 h-full group-hover:transform group-hover:scale-[1.02]" style={{ border: '1px solid var(--grey-warm-medium)', borderLeft: '4px solid var(--warm-accent)' }}>
+              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" style={{ background: 'rgba(47, 133, 90, 0.1)' }}></div>
+              <div className="relative p-8 rounded-2xl professional-card h-full group-hover:transform group-hover:scale-[1.02] transition-all duration-300" style={{ borderLeft: '4px solid var(--sage-deep)' }}>
                 <div className="flex items-center mb-6">
-                  <div className="w-3 h-3 rounded-full mr-3 group-hover:animate-pulse" style={{ backgroundColor: 'var(--warm-accent)' }}></div>
+                  <div className="w-3 h-3 rounded-full mr-3 group-hover:animate-pulse" style={{ backgroundColor: 'var(--sage-deep)' }}></div>
                   <h3 className="text-2xl font-bold" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>Compliance & Governance</h3>
                 </div>
                 <p className="text-lg leading-relaxed" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>From board frameworks to audit readiness</p>
@@ -342,10 +342,10 @@ function App() {
             </div>
             
             <div className="group relative">
-              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" style={{ background: 'rgba(49, 112, 142, 0.08)' }}></div>
-              <div className="relative p-8 bg-white backdrop-blur-sm rounded-2xl hover:shadow-xl transition-all duration-300 h-full group-hover:transform group-hover:scale-[1.02]" style={{ border: '1px solid var(--grey-warm-medium)', borderLeft: '4px solid var(--color-accent)' }}>
+              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" style={{ background: 'rgba(49, 130, 206, 0.1)' }}></div>
+              <div className="relative p-8 rounded-2xl professional-card h-full group-hover:transform group-hover:scale-[1.02] transition-all duration-300" style={{ borderLeft: '4px solid var(--navy-light)' }}>
                 <div className="flex items-center mb-6">
-                  <div className="w-3 h-3 rounded-full mr-3 group-hover:animate-pulse" style={{ backgroundColor: 'var(--color-accent)' }}></div>
+                  <div className="w-3 h-3 rounded-full mr-3 group-hover:animate-pulse" style={{ backgroundColor: 'var(--navy-light)' }}></div>
                   <h3 className="text-2xl font-bold" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>Transaction Readiness</h3>
                 </div>
                 <p className="text-lg leading-relaxed" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>M&A, financing, and strategic commercial deals</p>
@@ -353,10 +353,10 @@ function App() {
             </div>
             
             <div className="group relative md:col-span-2 lg:col-span-2">
-              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" style={{ background: 'rgba(74, 144, 172, 0.08)' }}></div>
-              <div className="relative p-8 bg-white backdrop-blur-sm rounded-2xl hover:shadow-xl transition-all duration-300 h-full group-hover:transform group-hover:scale-[1.02]" style={{ border: '1px solid var(--grey-warm-medium)', borderLeft: '4px solid var(--blue-light)' }}>
+              <div className="absolute inset-0 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" style={{ background: 'rgba(44, 82, 130, 0.1)' }}></div>
+              <div className="relative p-8 rounded-2xl professional-card h-full group-hover:transform group-hover:scale-[1.02] transition-all duration-300" style={{ borderLeft: '4px solid var(--navy-medium)' }}>
                 <div className="flex items-center mb-6">
-                  <div className="w-3 h-3 rounded-full mr-3 group-hover:animate-pulse" style={{ backgroundColor: 'var(--blue-light)' }}></div>
+                  <div className="w-3 h-3 rounded-full mr-3 group-hover:animate-pulse" style={{ backgroundColor: 'var(--navy-medium)' }}></div>
                   <h3 className="text-2xl font-bold" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>Legal-Business Advisory</h3>
                 </div>
                 <p className="text-lg leading-relaxed" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>Strategic insight at the intersection of law, ops, and leadership</p>
@@ -379,7 +379,7 @@ function App() {
           <p className="text-xl text-slate-300 mb-8 font-light" style={{ fontFamily: 'var(--font-sans)' }}>
             Fractional General Counsel for Growing Companies
           </p>
-          <div className="w-24 h-1 mx-auto rounded-full mb-8" style={{ background: 'linear-gradient(90deg, #B68D40 0%, #8C1D40 100%)' }}></div>
+          <div className="w-24 h-1 mx-auto rounded-full mb-8" style={{ background: 'linear-gradient(90deg, var(--blue-professional) 0%, var(--sage-medium) 100%)' }}></div>
           <p className="text-slate-400" style={{ fontFamily: 'var(--font-sans)' }}>
             © 2025 StrataGC. All rights reserved.
           </p>
