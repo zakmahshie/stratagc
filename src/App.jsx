@@ -65,34 +65,34 @@ function App() {
               
               {/* Dropdown Menu */}
               <div className={`absolute top-full right-0 mt-2 w-48 bg-white/95 backdrop-blur-xl rounded-xl border border-slate-200 shadow-xl transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'}`}>
-                <nav className="py-2">
+                <nav className="py-2 px-2">
                   <button
                     onClick={() => scrollToSection('hero')}
-                    className="block w-full text-left px-4 py-3 text-slate-600 hover:text-slate-800 hover:bg-slate-50 transition-colors duration-200"
+                    className="block w-full text-left px-3 py-2 text-slate-600 hover:text-slate-800 hover:bg-slate-50 active:bg-slate-100 transition-colors duration-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-slate-50"
                   >
                     Home
                   </button>
                   <button
                     onClick={() => scrollToSection('about')}
-                    className="block w-full text-left px-4 py-3 text-slate-600 hover:text-slate-800 hover:bg-slate-50 transition-colors duration-200"
+                    className="block w-full text-left px-3 py-2 text-slate-600 hover:text-slate-800 hover:bg-slate-50 active:bg-slate-100 transition-colors duration-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-slate-50"
                   >
                     About
                   </button>
                   <button
                     onClick={() => scrollToSection('why-stratagc')}
-                    className="block w-full text-left px-4 py-3 text-slate-600 hover:text-slate-800 hover:bg-slate-50 transition-colors duration-200"
+                    className="block w-full text-left px-3 py-2 text-slate-600 hover:text-slate-800 hover:bg-slate-50 active:bg-slate-100 transition-colors duration-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-slate-50"
                   >
                     Why StrataGC?
                   </button>
                   <button
                     onClick={() => scrollToSection('services')}
-                    className="block w-full text-left px-4 py-3 text-slate-600 hover:text-slate-800 hover:bg-slate-50 transition-colors duration-200"
+                    className="block w-full text-left px-3 py-2 text-slate-600 hover:text-slate-800 hover:bg-slate-50 active:bg-slate-100 transition-colors duration-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-slate-50"
                   >
                     Services
                   </button>
                   <button
                     onClick={() => scrollToSection('contact')}
-                    className="block w-full text-left px-4 py-3 text-slate-600 hover:text-slate-800 hover:bg-slate-50 transition-colors duration-200"
+                    className="block w-full text-left px-3 py-2 text-slate-600 hover:text-slate-800 hover:bg-slate-50 active:bg-slate-100 transition-colors duration-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-slate-50"
                   >
                     Contact Us
                   </button>
