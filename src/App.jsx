@@ -118,10 +118,6 @@ function App() {
             </p>
             
             <div className="flex flex-col items-center space-y-6 pt-8">
-              <div className="text-2xl font-light text-white" style={{ fontFamily: 'var(--font-serif)' }}>
-                In business, clarity comes in layers.
-              </div>
-              
               <button className="group relative px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl text-white" 
                       style={{ 
                         background: 'linear-gradient(135deg, var(--blue-professional) 0%, var(--sage-medium) 100%)',
@@ -157,10 +153,20 @@ function App() {
           
           {/* Main Philosophy */}
           <div className="text-center mb-16">
-            <div className="max-w-4xl mx-auto p-8 rounded-2xl professional-card">
+            <div className="max-w-4xl mx-auto">
               <h3 className="text-2xl font-bold mb-6" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>Our Philosophy</h3>
               <p className="text-xl leading-relaxed" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>
                 StrataGC was founded on the belief that legal should be embedded in strategy—not bolted on as an afterthought. Our founder brings years of executive-level in-house legal experience supporting high-growth companies, government contractors, and founder-led teams.
+              </p>
+            </div>
+          </div>
+
+          {/* Who We Serve */}
+          <div className="text-center mb-16">
+            <div className="max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold mb-6" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>Who We Serve</h3>
+              <p className="text-xl leading-relaxed" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>
+                Whether you're a founder needing board-ready legal infrastructure, a COO trying to operationalize compliance, or a federal contractor preparing for your next audit or joint venture, StrataGC becomes your legal layer of strategic advantage.
               </p>
             </div>
           </div>
@@ -170,7 +176,7 @@ function App() {
             {/* What We Do */}
             <div className="space-y-6">
               <h3 className="text-3xl font-bold mb-8 text-center lg:text-left" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>What We Do</h3>
-              <div className="p-8 rounded-2xl professional-card">
+              <div>
                 <p className="text-lg leading-relaxed mb-4" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>
                   StrataGC exists for companies that are growing, scaling, or navigating complexity—and who need more than reactive legal support.
                 </p>
@@ -183,7 +189,7 @@ function App() {
             {/* How We Work */}
             <div className="space-y-6">
               <h3 className="text-3xl font-bold mb-8 text-center lg:text-left" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>How We Work</h3>
-              <div className="p-8 rounded-2xl professional-card">
+              <div>
                 <p className="text-lg leading-relaxed mb-4" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>
                   At StrataGC, we believe that every layer of your business—operations, finance, people, governance—has legal implications that should be handled with foresight, not hindsight.
                 </p>
@@ -216,13 +222,10 @@ function App() {
             </div>
           </div>
 
-          {/* Who We Serve */}
-          <div className="mt-16 text-center">
-            <div className="p-8 rounded-2xl professional-card">
-              <h3 className="text-2xl font-bold mb-6" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>Who We Serve</h3>
-              <p className="text-xl leading-relaxed max-w-4xl mx-auto" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>
-                Whether you're a founder needing board-ready legal infrastructure, a COO trying to operationalize compliance, or a federal contractor preparing for your next audit or joint venture, StrataGC becomes your legal layer of strategic advantage.
-              </p>
+          {/* Tagline */}
+          <div className="text-center mt-12">
+            <div className="text-2xl font-medium py-12 px-8 inline-block" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-serif)', textDecoration: 'underline overline', textDecorationColor: 'var(--blue-professional)', textDecorationThickness: '2px', textUnderlineOffset: '8px' }}>
+              In business, clarity comes in layers.
             </div>
           </div>
         </div>
