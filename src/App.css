@@ -1,9 +1,12 @@
+/* Remove or comment out the problematic root styles */
+/*
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
+*/
 
 .logo {
   height: 6em;
@@ -39,4 +42,58 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Custom overline and underline with independent spacing */
+.custom-underline-overline {
+  position: relative;
+  display: inline-block;
+  padding: 6px 0; /* Even less padding for closer spacing */
+}
+
+.custom-underline-overline::before {
+  content: '';
+  position: absolute;
+  top: 1px; /* Position overline very close to text */
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #ffffff; /* White color */
+}
+
+.custom-underline-overline::after {
+  content: '';
+  position: absolute;
+  bottom: 1px; /* Position underline very close to text */
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #ffffff; /* White color */
+}
+
+/* Custom overline and underline for services section with matching text color */
+.custom-underline-overline-dark {
+  position: relative;
+  display: inline-block;
+  padding: 6px 0; /* Even less padding for closer spacing */
+}
+
+.custom-underline-overline-dark::before {
+  content: '';
+  position: absolute;
+  top: 1px; /* Position overline very close to text */
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--grey-warm-dark); /* Match text color */
+}
+
+.custom-underline-overline-dark::after {
+  content: '';
+  position: absolute;
+  bottom: 1px; /* Position underline very close to text */
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--grey-warm-dark); /* Match text color */
 }

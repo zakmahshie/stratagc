@@ -1,5 +1,6 @@
 import logo from './assets/logo.png'
 import { useState, useEffect, useRef } from 'react'
+import './App.css'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -224,7 +225,7 @@ function App() {
 
           {/* Tagline */}
           <div className="text-center mt-12">
-            <div className="text-2xl font-medium py-12 px-8 inline-block" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-serif)', textDecoration: 'underline overline', textDecorationColor: 'var(--blue-professional)', textDecorationThickness: '2px', textUnderlineOffset: '8px' }}>
+            <div className="text-2xl font-medium py-12 px-8 inline-block" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-serif)', textDecoration: 'underline overline', textDecorationColor: 'var(--blue-professional)', textDecorationThickness: '3px', textUnderlineOffset: '8px' }}>
               In business, clarity comes in layers.
             </div>
           </div>
@@ -282,15 +283,14 @@ function App() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.871 4A17.926 17.926 0 003 12c0 2.874.673 5.59 1.871 8m14.13 0a17.926 17.926 0 001.87-8c0-2.874-.673-5.59-1.87-8M9 9h1.246a1 1 0 01.961.725l1.586 5.55a1 1 0 00.961.725H15m1-7h-.08a2 2 0 00-1.519.698L9.6 15.302A2 2 0 018.08 16H8" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 text-center" style={{ fontFamily: 'var(--font-serif)' }}>Flexible</h3>
+                <h3 className="text-2xl font-bold mb-4 text-center" style={{ color: 'var(--font-serif)' }}>Flexible</h3>
                 <p className="text-slate-200 text-center leading-relaxed" style={{ fontFamily: 'var(--font-sans)' }}>Fractional services tailored to your stage, industry, and structure.</p>
               </div>
             </div>
           </div>
-          
           <div className="text-center">
-            <div className="inline-block p-8 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
-              <p className="text-2xl font-light text-white" style={{ fontFamily: 'var(--font-serif)' }}>StrataGC is legal leadership you can build around.</p>
+            <div className="text-2xl font-large py-12 text-white custom-underline-overline" style={{ fontFamily: 'var(--font-serif)' }}>
+              StrataGC is legal leadership you can build around.
             </div>
           </div>
         </div>
@@ -301,12 +301,11 @@ function App() {
         <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, var(--grey-warm-light) 0%, var(--white-pure) 100%)' }}></div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12">
             <h2 className="text-5xl lg:text-6xl font-bold mb-6" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>
               Services
             </h2>
             <p className="text-2xl font-light mb-4" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>What We Do</p>
-            <p className="text-xl" style={{ color: 'var(--grey-warm-dark)', fontFamily: 'var(--font-sans)' }}>Fractional General Counsel + Business Advisor, Delivered Where You Need It Most</p>
             <div className="w-24 h-1 mx-auto rounded-full mt-8" style={{ background: 'linear-gradient(90deg, var(--blue-professional) 0%, var(--sage-medium) 100%)' }}></div>
           </div>
           
@@ -365,6 +364,10 @@ function App() {
                 <p className="text-lg leading-relaxed" style={{ color: 'var(--grey-warm-darker)', fontFamily: 'var(--font-sans)' }}>Strategic insight at the intersection of law, ops, and leadership</p>
               </div>
             </div>
+          </div>
+          
+          <div className="text-center mt-16">
+            <p className="text-xl custom-underline-overline-dark" style={{ color: 'var(--grey-warm-dark)', fontFamily: 'var(--font-sans)' }}>Fractional General Counsel + Business Advisor, Delivered Where You Need It Most</p>
           </div>
         </div>
       </section>
