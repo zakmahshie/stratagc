@@ -119,16 +119,20 @@ function App() {
             </p>
             
             <div className="flex flex-col items-center space-y-6 pt-8">
-              <button className="group relative px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl text-white" 
-                      style={{ 
-                        background: 'linear-gradient(135deg, var(--blue-professional) 0%, var(--sage-medium) 100%)',
-                        boxShadow: '0 10px 30px rgba(46, 125, 143, 0.3)'
-                      }}
-                      onMouseEnter={(e) => e.target.style.boxShadow = '0 15px 40px rgba(46, 125, 143, 0.4)'}
-                      onMouseLeave={(e) => e.target.style.boxShadow = '0 10px 30px rgba(46, 125, 143, 0.3)'}>
+              <a href="https://calendar.app.google/WbPFf7fdY9ZhAQsVA" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 className="group relative px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl text-white no-underline hover:no-underline focus:no-underline" 
+                 style={{ 
+                   background: 'linear-gradient(135deg, var(--blue-professional) 0%, var(--sage-medium) 100%)',
+                   boxShadow: '0 10px 30px rgba(46, 125, 143, 0.3)',
+                   textDecoration: 'none'
+                 }}
+                 onMouseEnter={(e) => e.target.style.boxShadow = '0 15px 40px rgba(46, 125, 143, 0.4)'}
+                 onMouseLeave={(e) => e.target.style.boxShadow = '0 10px 30px rgba(46, 125, 143, 0.3)'}>
                 <span className="relative z-10">Get Started</span>
                 <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300" style={{ background: 'linear-gradient(135deg, var(--sage-light) 0%, var(--blue-professional) 100%)' }}></div>
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -233,7 +237,7 @@ function App() {
       </section>
 
       {/* Why StrataGC Section */}
-      <section id="why-stratagc" className="relative py-32" style={{ background: 'linear-gradient(180deg, var(--navy-deep) 0%, var(--navy-medium) 100%)' }}>
+      <section id="why-stratagc" className="relative py-32" style={{ background: 'linear-gradient(180deg, #0A1F44 0%, #1F2A44 100%)' }}>
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/2 left-1/4 w-72 h-72 rounded-full blur-3xl" style={{ background: 'rgba(46, 125, 143, 0.15)' }}></div>
           <div className="absolute top-1/4 right-1/4 w-72 h-72 rounded-full blur-3xl" style={{ background: 'rgba(56, 161, 105, 0.15)' }}></div>
@@ -257,7 +261,7 @@ function App() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 text-center" style={{ fontFamily: 'var(--font-serif)' }}>Embedded</h3>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center" style={{ fontFamily: 'var(--font-serif)', color: '#ffffff' }}>Embedded</h3>
                 <p className="text-slate-200 text-center leading-relaxed" style={{ fontFamily: 'var(--font-sans)' }}>We integrate with your team and operate inside your business—not outside it.</p>
               </div>
             </div>
@@ -270,7 +274,7 @@ function App() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 text-center" style={{ fontFamily: 'var(--font-serif)' }}>Strategic</h3>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center" style={{ fontFamily: 'var(--font-serif)', color: '#ffffff' }}>Strategic</h3>
                 <p className="text-slate-200 text-center leading-relaxed" style={{ fontFamily: 'var(--font-sans)' }}>Legal advice aligned with growth, governance, and operational objectives.</p>
               </div>
             </div>
@@ -283,7 +287,7 @@ function App() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.871 4A17.926 17.926 0 003 12c0 2.874.673 5.59 1.871 8m14.13 0a17.926 17.926 0 001.87-8c0-2.874-.673-5.59-1.87-8M9 9h1.246a1 1 0 01.961.725l1.586 5.55a1 1 0 00.961.725H15m1-7h-.08a2 2 0 00-1.519.698L9.6 15.302A2 2 0 018.08 16H8" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-center" style={{ color: 'var(--font-serif)' }}>Flexible</h3>
+                <h3 className="text-2xl font-bold mb-4 text-center" style={{ fontFamily: 'var(--font-serif)', color: '#ffffff' }}>Flexible</h3>
                 <p className="text-slate-200 text-center leading-relaxed" style={{ fontFamily: 'var(--font-sans)' }}>Fractional services tailored to your stage, industry, and structure.</p>
               </div>
             </div>
@@ -372,6 +376,46 @@ function App() {
         </div>
       </section>
 
+      {/* Contact Section */}
+      <section className="relative py-16" style={{ background: 'var(--grey-warm-light)' }}>
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, var(--grey-warm-light) 0%, var(--white-pure) 100%)' }}></div>
+        <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold mb-8" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>
+            Contact Us
+          </h2>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+            <div
+               className="flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 no-underline hover:no-underline border"
+               style={{ 
+                 fontFamily: 'var(--font-sans)', 
+                 textDecoration: 'none',
+                 color: 'var(--color-text)',
+                 borderColor: 'var(--blue-professional)',
+                 background: 'transparent',
+                 cursor: 'pointer'
+               }}>
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              contact@stratagc.com
+            </div>
+            
+            <a href="https://calendar.app.google/WbPFf7fdY9ZhAQsVA" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               className="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 text-white no-underline hover:no-underline"
+               style={{ 
+                 background: 'linear-gradient(135deg, var(--blue-professional) 0%, var(--sage-medium) 100%)',
+                 fontFamily: 'var(--font-sans)', 
+                 textDecoration: 'none'
+               }}>
+              Schedule a Call
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="relative py-20" style={{ background: 'linear-gradient(180deg, #0A1F44 0%, #1F2A44 100%)' }}>
         <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, #0A1F44 0%, #1F2A44 100%)' }}></div>
@@ -387,9 +431,12 @@ function App() {
           <p className="text-xl text-slate-300 mb-8 font-light" style={{ fontFamily: 'var(--font-sans)' }}>
             Fractional General Counsel for Growing Companies
           </p>
+          
+          
+          
           <div className="w-24 h-1 mx-auto rounded-full mb-8" style={{ background: 'linear-gradient(90deg, var(--blue-professional) 0%, var(--sage-medium) 100%)' }}></div>
           <p className="text-slate-400" style={{ fontFamily: 'var(--font-sans)' }}>
-            © 2025 StrataGC. All rights reserved.
+            © 2025 StrataGC PLLC. All rights reserved.
           </p>
         </div>
       </footer>
