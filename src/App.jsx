@@ -378,8 +378,10 @@ function App() {
         <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <div className="flex items-center justify-center mb-8">
             <img src={logo} alt="StrataGC Logo" className="h-12 w-12 mr-4" />
-            <h3 className="text-3xl font-bold text-white" style={{ fontFamily: 'var(--font-serif)' }}>
-              StrataGC
+            <h3 className="text-3xl font-bold" style={{ fontFamily: 'var(--font-serif)' }}>
+              <span className="bg-gradient-to-r from-white via-blue-100 to-emerald-100 bg-clip-text text-transparent">
+                StrataGC
+              </span>
             </h3>
           </div>
           <p className="text-xl text-slate-300 mb-8 font-light" style={{ fontFamily: 'var(--font-sans)' }}>
