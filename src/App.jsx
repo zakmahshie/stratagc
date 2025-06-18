@@ -90,6 +90,12 @@ function App() {
                   >
                     Services
                   </button>
+                  <button
+                    onClick={() => scrollToSection('contact')}
+                    className="block w-full text-left px-4 py-3 text-slate-600 hover:text-slate-800 hover:bg-slate-50 transition-colors duration-200"
+                  >
+                    Contact Us
+                  </button>
                 </nav>
               </div>
             </div>
@@ -377,7 +383,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section className="relative py-16" style={{ background: 'var(--grey-warm-light)' }}>
+      <section id = 'contact' className="relative py-16" style={{ background: 'var(--grey-warm-light)' }}>
         <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, var(--grey-warm-light) 0%, var(--white-pure) 100%)' }}></div>
         <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-8" style={{ color: 'var(--color-text)', fontFamily: 'var(--font-serif)' }}>
