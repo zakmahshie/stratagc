@@ -121,7 +121,7 @@ function App() {
             </h2>
             
             <p className="text-xl lg:text-2xl text-slate-200 max-w-4xl mx-auto leading-relaxed font-light" style={{ fontFamily: 'var(--font-sans)' }}>
-              Fractional General Counsel, business advisory support, and matter management for growing companies that need embedded legal leadership—without the overhead of a full-time hire.
+              Fractional General Counsel, mission-oriented legal advisory support, and matter management for growing companies that need embedded legal leadership—without the overhead of a full-time hire.
             </p>
             
             <div className="flex flex-col items-center space-y-6 pt-8">
