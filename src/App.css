@@ -112,7 +112,7 @@
   bottom: 0;
   background-image: var(--mountain-bg-image);
   background-size: cover;
-  background-position: center;
+  background-position: 33% center;
   background-repeat: no-repeat;
   opacity: 0.4; /* Adjust this value to control visibility/transparency */
   z-index: 0;

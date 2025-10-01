@@ -126,20 +126,30 @@ function App() {
             </p>
             
             <div className="flex flex-col items-center space-y-6 pt-8">
-              <a href="https://calendar.app.google/WbPFf7fdY9ZhAQsVA" 
-                 target="_blank" 
-                 rel="noopener noreferrer"
-                 className="group relative px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl text-white no-underline hover:no-underline focus:no-underline" 
-                 style={{ 
+              <div
+                 className="group relative px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl text-white cursor-pointer select-text"
+                 style={{
                    background: 'linear-gradient(135deg, var(--blue-professional) 0%, var(--sage-medium) 100%)',
                    boxShadow: '0 10px 30px rgba(46, 125, 143, 0.3)',
                    textDecoration: 'none'
                  }}
                  onMouseEnter={(e) => e.target.style.boxShadow = '0 15px 40px rgba(46, 125, 143, 0.4)'}
-                 onMouseLeave={(e) => e.target.style.boxShadow = '0 10px 30px rgba(46, 125, 143, 0.3)'}>
-                <span className="relative z-10">Get Started</span>
+                 onMouseLeave={(e) => e.target.style.boxShadow = '0 10px 30px rgba(46, 125, 143, 0.3)'}
+                 onClick={(e) => {
+                   // Only trigger mailto if no text is selected
+                   const selection = window.getSelection();
+                   if (selection.toString().length === 0) {
+                     window.location.href = 'mailto:contact@stratagc.com';
+                   }
+                 }}>
+                <div className="flex items-center">
+                  <svg className="w-5 h-5 mr-2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <span className="relative z-10 select-text">contact@stratagc.com</span>
+                </div>
                 <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300" style={{ background: 'linear-gradient(135deg, var(--sage-light) 0%, var(--blue-professional) 100%)' }}></div>
-              </a>
+              </div>
             </div>
           </div>
         </div>
@@ -432,11 +442,11 @@ function App() {
             Contact Us
           </h2>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+          <div className="flex justify-center">
             <div
                className="flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 no-underline hover:no-underline border cursor-pointer select-text"
-               style={{ 
-                 fontFamily: 'var(--font-sans)', 
+               style={{
+                 fontFamily: 'var(--font-sans)',
                  textDecoration: 'none',
                  color: 'var(--color-text)',
                  borderColor: 'var(--blue-professional)',
@@ -454,18 +464,6 @@ function App() {
               </svg>
               <span className="select-text">contact@stratagc.com</span>
             </div>
-            
-            <a href="https://calendar.app.google/WbPFf7fdY9ZhAQsVA" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               className="px-6 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 text-white no-underline hover:no-underline"
-               style={{ 
-                 background: 'linear-gradient(135deg, var(--blue-professional) 0%, var(--sage-medium) 100%)',
-                 fontFamily: 'var(--font-sans)', 
-                 textDecoration: 'none'
-               }}>
-              Schedule a Call
-            </a>
           </div>
         </div>
       </section>
