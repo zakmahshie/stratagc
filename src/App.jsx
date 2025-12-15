@@ -5,11 +5,38 @@ import './App.css'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('hero')
   const menuRef = useRef(null)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
+
+  // Track active section based on scroll position
+  useEffect(() => {
+    const sectionIds = ['hero', 'about', 'why-stratagc', 'services', 'contact']
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id)
+          }
+        })
+      },
+      {
+        rootMargin: '-20% 0px -70% 0px', // Trigger when section is in upper portion of viewport
+        threshold: 0
+      }
+    )
+
+    sectionIds.forEach((id) => {
+      const element = document.getElementById(id)
+      if (element) observer.observe(element)
+    })
+
+    return () => observer.disconnect()
+  }, [])
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
@@ -69,31 +96,31 @@ function App() {
                 <nav className="py-2 px-2">
                   <button
                     onClick={() => scrollToSection('hero')}
-                    className="block w-full text-left px-3 py-2 text-slate-600 hover:text-slate-800 hover:bg-slate-50 active:bg-slate-100 transition-colors duration-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-slate-50"
+                    className={`block w-full text-left px-3 py-2 transition-colors duration-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-slate-50 ${activeSection === 'hero' ? 'text-blue-600 bg-blue-50 font-medium' : 'text-slate-600 hover:text-slate-800 hover:bg-slate-50 active:bg-slate-100'}`}
                   >
                     Home
                   </button>
                   <button
                     onClick={() => scrollToSection('about')}
-                    className="block w-full text-left px-3 py-2 text-slate-600 hover:text-slate-800 hover:bg-slate-50 active:bg-slate-100 transition-colors duration-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-slate-50"
+                    className={`block w-full text-left px-3 py-2 transition-colors duration-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-slate-50 ${activeSection === 'about' ? 'text-blue-600 bg-blue-50 font-medium' : 'text-slate-600 hover:text-slate-800 hover:bg-slate-50 active:bg-slate-100'}`}
                   >
                     About
                   </button>
                   <button
                     onClick={() => scrollToSection('why-stratagc')}
-                    className="block w-full text-left px-3 py-2 text-slate-600 hover:text-slate-800 hover:bg-slate-50 active:bg-slate-100 transition-colors duration-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-slate-50"
+                    className={`block w-full text-left px-3 py-2 transition-colors duration-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-slate-50 ${activeSection === 'why-stratagc' ? 'text-blue-600 bg-blue-50 font-medium' : 'text-slate-600 hover:text-slate-800 hover:bg-slate-50 active:bg-slate-100'}`}
                   >
                     Why StrataGC?
                   </button>
                   <button
                     onClick={() => scrollToSection('services')}
-                    className="block w-full text-left px-3 py-2 text-slate-600 hover:text-slate-800 hover:bg-slate-50 active:bg-slate-100 transition-colors duration-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-slate-50"
+                    className={`block w-full text-left px-3 py-2 transition-colors duration-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-slate-50 ${activeSection === 'services' ? 'text-blue-600 bg-blue-50 font-medium' : 'text-slate-600 hover:text-slate-800 hover:bg-slate-50 active:bg-slate-100'}`}
                   >
                     Services
                   </button>
                   <button
                     onClick={() => scrollToSection('contact')}
-                    className="block w-full text-left px-3 py-2 text-slate-600 hover:text-slate-800 hover:bg-slate-50 active:bg-slate-100 transition-colors duration-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-slate-50"
+                    className={`block w-full text-left px-3 py-2 transition-colors duration-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-slate-50 ${activeSection === 'contact' ? 'text-blue-600 bg-blue-50 font-medium' : 'text-slate-600 hover:text-slate-800 hover:bg-slate-50 active:bg-slate-100'}`}
                   >
                     Contact Us
                   </button>
